@@ -1,12 +1,12 @@
-import dbConnect from '@/lib/dbConnect';
-import Form from '@/models/formModel';
+import dbConnect from '../../../lib/dbConnect';
+import Form from '../../../models/formModel';
 import { NextResponse } from 'next/server';
 
 export async function POST(req) {
   try {
     await dbConnect();
     const data = await req.json();
-    
+
     const newForm = new Form({
       productLiability: data.productLiability,
       isAttorneyHelping: data.isAttorneyHelping,
