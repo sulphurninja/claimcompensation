@@ -22,6 +22,7 @@ export default function ProductForm() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -34,6 +35,7 @@ export default function ProductForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      setLoading(true);
       const res = await fetch('/api/submit-form', {
         method: 'POST',
         headers: {
@@ -45,6 +47,7 @@ export default function ProductForm() {
       if (res.ok) {
         setSubmitted(true);
         toast.success("Form Submitted Successfully!")
+        setLoading(false);
         setFormData({
           productLiability: '',
           isAttorneyHelping: '',
@@ -268,7 +271,7 @@ export default function ProductForm() {
 
             {/* Submit Button */}
             <button type="submit" className="w-full md:col-span-2 p-4 bg-[#8E6A17] text-white rounded">
-              Submit
+              {loading? "Submitting....":"Submit"}
             </button>
           </form>
 

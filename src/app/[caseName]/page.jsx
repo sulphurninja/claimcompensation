@@ -17,7 +17,7 @@ const casesData = {
       // Add more FAQs
     ],
   },
-  'afff-firefighting-foam-lawsuit': {
+  'firefighting-foam-fff-lawsuit': {
     title: 'AFFF Firefighting Foam Lawsuit',
     description: 'If you developed cancer due to exposure to the hazardous chemicals in firefighting foam, it is important to seek immediate assistance to understand your legal options. You might have the right to receive financial compensation from the manufacturer for the harm you have endured. We can assess your situation and connect you with a lawyer who can represent you. It is crucial to pursue justice for your distressing diagnosis and the resulting financial burdens.We possess the expertise and resources to link you with a skilled and dedicated attorney who can handle the legal aspects of your case while you focus on your treatment. You wont have to face this traumatic period alone; a caring legal team will be by your side, offering the necessary support and guidance.Firefighting foam has been effective in combating fires, but unfortunately, it contains harmful substances that have been linked to an increased risk of certain cancers, such as pancreatic, kidney, and testicular cancer. The manufacturing companies were aware of these dangers but neglected to inform users about the potential adverse effects. You have the opportunity to file a lawsuit against them and seek rightful and comprehensive compensation. ',
     img1: '/foam.jpg',
