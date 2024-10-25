@@ -11,7 +11,7 @@ export default function LegalConsultation() {
                             We can help if you lost a loved one or sustained injuries due to a defective medical device, prescription drug, or dangerous consumer product. With years of experience, we protect the legal rights of individuals whose physical and mental health have been harmed by others. When you hire us, our team will qualify your case, provide legal guidance at every step, and keep you updated on your litigation. Take advantage of our free assistance to discuss your case with a member of our team.
                         </span>
                     </p>
-                    <ul className="mt-4 space-y-2 text-[#8e6a17] font-bold">
+                    <ul className="mt-4 space-y-2 text-green-800 font-bold">
                         <li>✔️ We ensure that our call center remains open round-the-clock.</li>
                         <li>✔️ We streamline our intake process to make it effortless for you.</li>
                         <li>✔️ A knowledgeable and dedicated professional will provide personalized attention.</li>

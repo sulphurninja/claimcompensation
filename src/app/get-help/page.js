@@ -270,7 +270,7 @@ export default function ProductForm() {
             </div>
 
             {/* Submit Button */}
-            <button type="submit" className="w-full md:col-span-2 p-4 bg-[#8E6A17] text-white rounded">
+            <button type="submit" className="w-full md:col-span-2 p-4 bg-green-800 text-white rounded">
               {loading? "Submitting....":"Submit"}
             </button>
           </form>

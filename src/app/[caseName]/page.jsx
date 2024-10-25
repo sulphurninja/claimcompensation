@@ -145,7 +145,7 @@ export default function CasePage({ params }) {
       <FAQSection faq={caseData.faq} />
       <div className="w-full flex justify-center mb-4">
         <Link href="/get-help">
-          <h1 className="bg-[#8e6a17] text-white w-fit text-sm py-2 px-4 rounded">Get Help Now</h1>
+          <h1 className="bg-green-800 text-white w-fit text-sm py-2 px-4 rounded">Get Help Now</h1>
         </Link>
       </div>
       <Footer />

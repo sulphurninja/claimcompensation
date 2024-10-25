@@ -21,7 +21,7 @@ export default function Lawsuits() {
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-6 text-white">
         {lawsuits.map((lawsuit, index) => (
           <Link key={index} href={lawsuit.link}>
-            <div className="flex justify-between items-center hover:bg-black hover:text-white cursor-pointer bg-[#8e6a17] border p-4 rounded-md">
+            <div className="flex justify-between items-center hover:bg-black hover:text-white cursor-pointer bg-green-700 border p-4 rounded-md">
               <span>{lawsuit.name}</span>
               <span className="text-xl">➔</span>
             </div>
@@ -31,7 +31,7 @@ export default function Lawsuits() {
       </div>
       <div className="flex justify-center items-center bg-[#] p-4 rounded-md">
           <Link href='/get-help'>
-            <button className="text-white bg-[#8e6a17] py-2 px-6 rounded-lg">Get Help Now</button>
+            <button className="text-white bg-green-800 py-2 px-6 rounded-lg">Get Help Now</button>
           </Link>
         </div>
     </section>

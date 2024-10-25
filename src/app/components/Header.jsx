@@ -8,7 +8,7 @@ export default function Header() {
     const [dropdownOpen, setDropdownOpen] = useState(false);
 
     return (
-        <header className="bg-white border-b border-[#8e6a17] shadow-md">
+        <header className="bg-white border-b border-green-800 shadow-md">
             <div className="container mx-auto flex justify-between items-center p-6">
                 {/* Logo Section */}
                 <div className="md:text-3xl text-md font-bold ">
@@ -37,7 +37,7 @@ export default function Header() {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/firefighting-foam-fff-lawsuit" className="block px-4 py-2 hover:bg-gray-100">
+                                        <Link href="/afff-firefighting-foam-lawsuit" className="block px-4 py-2 hover:bg-gray-100">
                                             AFFF Firefighting Foam Lawsuit
                                         </Link>
                                     </li>
@@ -110,7 +110,7 @@ export default function Header() {
                         <h1 className="text-gray-700 hover:underline">Contact Us</h1>
                     </Link>
                     <Link href="/get-help">
-                        <h1 className="bg-[#8e6a17] text-white text-sm py-2 px-4 rounded">Get Help Now</h1>
+                        <h1 className="bg-green-800 text-white text-sm py-2 px-4 rounded">Get Help Now</h1>
                     </Link>
                 </nav>
 

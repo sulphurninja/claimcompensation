@@ -6,7 +6,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Branding Section */}
           <div>
-            <h3 className="text-2xl text-[#fec643] font-bold mb-4">Claim My Medical Compensation</h3>
+            <h3 className="text-2xl text-green-500 font-bold mb-4">Claim My Medical Compensation</h3>
             <p className="text-gray-300">
               Your trusted partner for legal consultation and support. We provide expert legal advice and guidance, ensuring that your legal needs are met efficiently and effectively.
             </p>
@@ -49,7 +49,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 border-t border-[#8e6a17] -800 pt-6 flex flex-col md:flex-row justify-between items-center">
+        <div className="mt-10 border-t border-green-800 -800 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-gray-400">© 2024 Claim My Medical Compensation. All rights reserved.</p>
           <div className="flex space-x-4 mt-4 md:mt-0">
             {/* <a href="#" className="text-gray-300 hover:text-white">Privacy Policy</a> */}
