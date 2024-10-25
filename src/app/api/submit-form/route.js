@@ -1,5 +1,5 @@
-import dbConnect from '@/lib/dbConnect';
-import Form from '@/models/formModel';
+import dbConnect from '../../../lib/dbConnect';
+import Form from '../../../models/formModel';
 import { NextResponse } from 'next/server';
 
 export async function POST(req) {
