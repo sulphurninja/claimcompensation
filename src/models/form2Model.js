@@ -13,6 +13,7 @@ const form2Schema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    ipAddress: String,
     product: {
         type: String,
         required: true,

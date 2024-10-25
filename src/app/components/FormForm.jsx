@@ -1,9 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import { toast, Toaster } from 'sonner';
+import axios from 'axios';
 
 export default function FormForm() {
     const [formData, setFormData] = useState({
@@ -11,10 +12,28 @@ export default function FormForm() {
         email: '',
         number: '',
         product: '',
+        ipAddress: '',
     });
 
     const [submitted, setSubmitted] = useState(false);
     const [loading, setLoading] = useState(false);
+
+
+    // Fetch IP address on mount
+    useEffect(() => {
+        async function fetchIP() {
+            try {
+                const res = await axios.get('https://api.ipify.org?format=json');
+                setFormData((prevData) => ({
+                    ...prevData,
+                    ipAddress: res.data.ip,
+                }));
+            } catch (error) {
+                console.error('Failed to fetch IP address:', error);
+            }
+        }
+        fetchIP();
+    }, []);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -45,6 +64,7 @@ export default function FormForm() {
                     email: '',
                     number: '',
                     product: '',
+                    ipAddress: '',
                 });
             }
         } catch (error) {
@@ -104,8 +124,8 @@ export default function FormForm() {
                             <label className="mb-2 text-sm font-semibold">Phone</label>
                             <input
                                 type="tel"
-                                name="phone"
-                                value={formData.phone}
+                                name="number"
+                                value={formData.number}
                                 onChange={handleChange}
                                 required
                                 className="p-3 border border-gray-300 rounded"
@@ -136,7 +156,7 @@ export default function FormForm() {
                                 className="mr-2"
                             />
                             <label className="text-sm">
-                                I agree to the Terms of Service and Privacy PolicyI agree to the Terms of Service and Privacy Policy and authorize mycaseclaim.com and up to 4 law firms, 3rd party providers and/or PLM to contact me by telephone, email, artificial voice and/or pre-recorded/text messages, using an automated telephone technology directs to the number or contact details provided above. I may additionally receive offers and/or information on offers and various services these providers offer, and I agree to such contact, even if my phone number is currently listed on any state, federal or corporate ‘Do Not Call’ list or registry. You may revoke this consent at any time. Message and data rates may apply. Your consent is NOT based on any condition of purchase of products and acceptance of services by any provider. The decision to engage with or contract for services with any provider is entirely up to your discretion
+                                I agree to the Terms of Service and Privacy Policy. I agree to the Terms of Service and Privacy Policy and authorize claimmymedicalcompensation.com and several law firms, 3rd party providers and/or PLM to contact me by telephone, email, artificial voice and/or pre-recorded/text messages, using an automated telephone technology directs to the number or contact details provided above. I may additionally receive offers and/or information on offers and various services these providers offer, and I agree to such contact, even if my phone number is currently listed on any state, federal or corporate ‘Do Not Call’ list or registry. You may revoke this consent at any time. Message and data rates may apply. Your consent is NOT based on any condition of purchase of products and acceptance of services by any provider. The decision to engage with or contract for services with any provider is entirely up to your discretion
                             </label>
                         </div>
 

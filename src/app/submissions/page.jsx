@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { useEffect, useState } from 'react';
 
 const Submissions = () => {
@@ -21,6 +21,11 @@ const Submissions = () => {
     fetchSubmissions();
   }, []);
 
+  const formatDate = (dateString) => {
+    const options = { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit', hour12: true };
+    return new Date(dateString).toLocaleString('en-US', options);
+  };
+
   if (loading) {
     return <div className="text-center mt-10">Loading submissions...</div>;
   }
@@ -31,27 +36,42 @@ const Submissions = () => {
       {submissions.length === 0 ? (
         <p className="text-center">No submissions found.</p>
       ) : (
-        <ul className="space-y-4">
-          {submissions.map((submission, index) => (
-            <li
-              key={submission._id}
-              className="border p-4 rounded-lg shadow-md bg-white hover:bg-gray-50 transition duration-300"
-            >
-              <div className="flex items-center justify-between">
-                <span className="text-xl font-semibold">{index + 1}. {submission.firstName} {submission.lastName}</span>
-                <span className="text-sm text-gray-500">{submission.email}</span>
-              </div>
-              <p className="text-gray-700 mt-2"><strong>Product Liability: </strong> {submission.productLiability}</p>
-
-              <p className="text-gray-700 mt-2"><strong>Phone:</strong> {submission.phone}</p>
-              <p className="text-gray-700"><strong>Case Description:</strong> {submission.caseDescription}</p>
-              <p className="text-gray-700"><strong>Year of Injury:</strong> {submission.yearOfInjury}</p>
-              <p className="text-gray-700"><strong>Address:</strong> {submission.address}, {submission.zipCode}</p>
-              <p className="text-gray-700"><strong>Is Attorney Helping? :</strong> {submission.isAttorneyHelping}</p>
-              <p className="text-gray-700"><strong>Best Time to Call:</strong> {submission.bestTimeToCall}</p>
-            </li>
-          ))}
-        </ul>
+        <table className="min-w-full border border-gray-300">
+          <thead>
+            <tr className="bg-gray-100">
+              <th className="border p-2 text-left">#</th>
+              <th className="border p-2 text-left">Name</th>
+              <th className="border p-2 text-left">Email</th>
+              <th className="border p-2 text-left">Product Liability</th>
+              <th className="border p-2 text-left">Phone</th>
+              {/* <th className="border p-2 text-left">Case Description</th> */}
+              {/* <th className="border p-2 text-left">Year of Injury</th> */}
+              <th className="border p-2 text-left">Address</th>
+              <th className="border p-2 text-left">Attorney Helping?</th>
+              <th className="border p-2 text-left">Best Time to Call</th>
+              <th className="border p-2 text-left">IP Address</th>
+              <th className="border p-2 text-left">Submitted At</th>
+            </tr>
+          </thead>
+          <tbody>
+            {submissions.map((submission, index) => (
+              <tr key={submission._id} className="border-b hover:bg-gray-50">
+                <td className="border p-2">{index + 1}</td>
+                <td className="border p-2">{submission.firstName} {submission.lastName}</td>
+                <td className="border p-2">{submission.email}</td>
+                <td className="border p-2">{submission.productLiability}</td>
+                <td className="border p-2">{submission.phone}</td>
+                {/* <td className="border p-2">{submission.caseDescription}</td> */}
+                {/* <td className="border p-2">{submission.yearOfInjury}</td> */}
+                <td className="border p-2">{submission.address}, {submission.zipCode}</td>
+                <td className="border p-2">{submission.isAttorneyHelping}</td>
+                <td className="border p-2">{submission.bestTimeToCall}</td>
+                <td className="border p-2">{submission.ipAddress}</td>
+                <td className="border p-2">{formatDate(submission.createdAt)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       )}
     </div>
   );

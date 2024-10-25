@@ -6,11 +6,14 @@ export async function POST(req) {
     try {
         await dbConnect();
         const data = await req.json();
+        // const ipAddress = req.headers.get('x-forwarded-for') || req.headers.get('remote-addr') || '';
+
         const newForm = new Form2({
             name: data.name,
             email: data.email,
             number: data.number,
             product: data.product,
+            ipAddress: data.ipAddress,
         });
 
         await newForm.save();

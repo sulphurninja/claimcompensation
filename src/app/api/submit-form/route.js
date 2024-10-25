@@ -6,7 +6,9 @@ export async function POST(req) {
   try {
     await dbConnect();
     const data = await req.json();
-    
+
+
+
     const newForm = new Form({
       productLiability: data.productLiability,
       isAttorneyHelping: data.isAttorneyHelping,
@@ -19,6 +21,7 @@ export async function POST(req) {
       phone: data.phone,
       email: data.email,
       zipCode: data.zipCode,
+      ipAddress: data.ipAddress, // Store IP address
       address: data.address,
     });
 

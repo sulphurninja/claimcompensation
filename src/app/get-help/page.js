@@ -1,9 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { toast, Toaster } from 'sonner';
+import axios from 'axios';
 
 export default function ProductForm() {
   const [formData, setFormData] = useState({
@@ -19,10 +20,27 @@ export default function ProductForm() {
     email: '',
     zipCode: '',
     address: '',
+    ipAddress: '',
   });
 
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  // Fetch IP address on mount
+  useEffect(() => {
+    async function fetchIP() {
+      try {
+        const res = await axios.get('https://api.ipify.org?format=json');
+        setFormData((prevData) => ({
+          ...prevData,
+          ipAddress: res.data.ip,
+        }));
+      } catch (error) {
+        console.error('Failed to fetch IP address:', error);
+      }
+    }
+    fetchIP();
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -61,6 +79,7 @@ export default function ProductForm() {
           email: '',
           zipCode: '',
           address: '',
+          ipAddress: '',
         });
       }
     } catch (error) {
@@ -270,8 +289,8 @@ export default function ProductForm() {
             </div>
 
             {/* Submit Button */}
-            <button type="submit" className="w-full md:col-span-2 p-4 bg-green-800 text-white rounded">
-              {loading? "Submitting....":"Submit"}
+            <button type="submit" className="w-full md:col-span-2 p-4 bg-green-800   text-white rounded">
+              {loading ? "Submitting...." : "Submit"}
             </button>
           </form>
 

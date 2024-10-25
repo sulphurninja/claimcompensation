@@ -31,7 +31,7 @@ export default function ContactUs() {
                             </div>
                             <div>
                             <Link href='/get-help'>
-                            <button  className='bg-[#8E6A17] hover:scale-90 text-white p-2 rounded mt-4'>Start here</button>
+                            <button  className='bg-green-800 hover:scale-90 text-white p-2 rounded mt-4'>Start here</button>
                             </Link>
 
                             </div>

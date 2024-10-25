@@ -12,6 +12,7 @@ const formSchema = new mongoose.Schema({
   phone: String,
   email: String,
   zipCode: String,
+  ipAddress: String,
   address: String,
 }, { timestamps: true });
 

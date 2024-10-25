@@ -5,14 +5,14 @@ import { useState } from 'react';
 
 const faqData = [
   {
-    question: 'What is Mass Tort Action?',
+    question: 'What is Mass Tort Class Action Lawsuit?',
     answer:
-      'A mass tort action occurs when a lawsuit involves multiple plaintiffs filing claims against one or more defendants. It typically deals with cases where many people are affected by the same product, accident, or harm, and all are seeking justice through collective legal action.',
-  },
+      'A mass tort class action occurs when a lawsuit involves multiple plaintiffs filing claims against one or more defendants. It typically deals with cases where many people are affected by the same product, accident, or harm, and all are seeking justice through collective legal action.',
+  }, 
   {
-    question: 'Common Types of Mass Tort Action',
+    question: 'Common Types of Mass Tort Class Action Lawsuit',
     answer:
-      'Common mass tort actions include cases related to defective drugs, environmental contamination, defective medical devices, and faulty consumer products.',
+      'Common mass tort class actions lawsuit include cases related to defective drugs, environmental contamination, defective medical devices, and faulty consumer products.',
   },
   {
     question: 'Factors That May Impact the Timeline and Settlement',
