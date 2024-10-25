@@ -13,6 +13,7 @@ export default function Lawsuits() {
     { name: 'Mesothelioma Lawsuit', link: '/mesothelioma-lawsuit' },
     { name: 'Rideshare Lawsuit', link: '/rideshare-lawsuit' },
     { name: 'PFAS Lawsuit', link: '/pfas-lawsuit' },
+    { name: 'Hair Relaxer', link: '/hair-relaxer' },
   ];
 
   return (
@@ -26,10 +27,13 @@ export default function Lawsuits() {
             </div>
           </Link>
         ))}
-        <div className="flex justify-center items-center bg-[#] p-4 rounded-md">
-          <button className="text-white bg-[#8e6a17] py-2 px-6 rounded-lg">Get Help Now</button>
-        </div>
+        
       </div>
+      <div className="flex justify-center items-center bg-[#] p-4 rounded-md">
+          <Link href='/get-help'>
+            <button className="text-white bg-[#8e6a17] py-2 px-6 rounded-lg">Get Help Now</button>
+          </Link>
+        </div>
     </section>
   );
 }

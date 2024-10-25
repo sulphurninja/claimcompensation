@@ -97,6 +97,7 @@ export default function ProductForm() {
                 <option value="Mesothelioma Lawsuit">Mesothelioma Lawsuit</option>
                 <option value="Rideshare Lawsuit">Rideshare Lawsuit</option>
                 <option value="PFAS Lawsuit">PFAS Lawsuit</option>
+                <option value="Hair Relaxer Lawsuit">Hair Relaxer Lawsuit</option>
               </select>
             </div>
 

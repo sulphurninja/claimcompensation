@@ -112,6 +112,15 @@ const casesData = {
       { question: 'What are PFAS?', answer: 'PFAS are toxic chemicals linked to cancer and other health issues, often found in firefighting foam and various consumer products.' },
     ],
   },
+  'hair-relaxer': {
+    title: 'Hair Relaxer',
+    description: 'Hair relaxer companies including Dark & Lovely, Just of Me, Optimum, Motions, Olive Oil Girls, and others brands are being sued as a result of failing to warn users of the health risks associated with hair relaxers.1 Hair relaxers are known to contain cancer-causing chemicals including Phthalates, Formaldehyde, Parabens, and DEHP.3 If you or a loved one used hair relaxers or straighteners and were later diagnosed with uterine cancer or breast cancer, you may be entitled to compensation.',
+    img1: '/hair.jpg',
+    img2: '/hair.webp',
+    faq: [
+      { question: 'What is Hair Relaxer?', answer: 'A relaxer is a type of lotion or cream generally used by people with tight curls or very curly hair which makes hair easier to straighten by chemically "relaxing" the natural curls.' },
+    ],
+  },
 
 };
 

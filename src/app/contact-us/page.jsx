@@ -16,8 +16,9 @@ export default function ContactUs() {
                     <div className='grid md:grid-cols-2 gap-4 mt-4'>
                         <div className='border rounded-lg border-black p-2 flex justify-center items-center'>
                             <div className='s'>
-                                <Phone className='scale-125' />
-                                <h1 className='text-lg'>By Phone</h1>
+                                <Phone className='scale-105 ml-20' />
+                                <h1 className='text-lg ml-16'>By Phone</h1>
+                                <h1 className='font-bold p-4 text-xl'>+1-908-842-1258</h1>
                             </div>
 
                         </div>

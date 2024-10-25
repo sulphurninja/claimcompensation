@@ -86,6 +86,11 @@ export default function Header() {
                                             PFAS Lawsuit
                                         </Link>
                                     </li>
+                                    <li>
+                                        <Link href="/hair-relaxer" className="block px-4 py-2 hover:bg-gray-100">
+                                            Hair Relaxer Lawsuit
+                                        </Link>
+                                    </li>
                                     {/* <li>
                                         <Link href="/services/other-services" className="block px-4 py-2 hover:bg-gray-100">
                                             Other Services
